@@ -35,7 +35,7 @@ def main():
     
     predict = st.button("Predict")
     if predict:
-        model = pickle.load(open('1CRPRED.pkl', 'rb'))
+        model = pickle.load(open('CRPRED.pkl', 'rb'))
         pred_currency = model.predict([[cny, pak, lkr, amd, btd, btn, cve, xof, aoa, alb]])
         st.header('The Estimated Currecy value is ₹ {}'.format(round(pred_currency[0],2)))
     
